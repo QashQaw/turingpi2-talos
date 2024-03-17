@@ -1,3 +1,5 @@
+![QashQaw](https://user-images.githubusercontent.com/130484646/233855095-e4c90972-46a2-46c2-a7e6-89c0bf854a0a.png)
+
 # [Turingpi2](https://turingpi.com/product/turing-pi-2/) with [talos linux](https://www.talos.dev/) and [Kubernetes Cluster](https://kubernetes.io/)
 
 I've been waiting a long time for the RK1 card to arrive, so that I had plenty of time to prepare my thoughts on this. Started out with only 1CM4 Pi4 Card - so not that much to prepare - But when only Unbuntu and talos imagesa are prepared for the RK1. Never the less - I do not like ubuntu on such small PC's - so talos is my choice. But I cannot take the credit for all the works others have done. 
