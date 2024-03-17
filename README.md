@@ -1,4 +1,4 @@
-<center>![QashQaw](https://user-images.githubusercontent.com/130484646/233855095-e4c90972-46a2-46c2-a7e6-89c0bf854a0a.png) </center>
+![QashQaw](https://user-images.githubusercontent.com/130484646/233855095-e4c90972-46a2-46c2-a7e6-89c0bf854a0a.png)
 
 # [Turingpi2](https://turingpi.com/product/turing-pi-2/) with [talos linux](https://www.talos.dev/) and [Kubernetes Cluster](https://kubernetes.io/)
 
