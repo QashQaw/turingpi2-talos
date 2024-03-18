@@ -18,7 +18,7 @@ After the default installation of the RK1 - we'll need to setup som small things
   * Adding nodes to the cluster
   * pushing updates of the cconfiurations
 
-Since I've been struggling wit hgetting the cluster up and running - I've created [a small script for resetting](https://gitlab.webmeup.dk/QashQaw/kubernetes/-/raw/master/TuringPi2/talos/reset-talos.sh?ref_type=heads) all the 4 nodes on the turingPi2. -it'll start flashing node 1 and start node 1 - before flashine node 2 + 3 + 4 - and power the 3nodes up in the end of the scripts - this can be 
+Since I've been struggling wit hgetting the cluster up and running - I've created [a small script for resetting](testing) all the 4 nodes on the turingPi2. -it'll start flashing node 1 and start node 1 - before flashine node 2 + 3 + 4 - and power the 3nodes up in the end of the scripts - this can be 
 
 ## Requirenments
 The turingpi2 Board + 4x RK1 cards - you will need talosctl and kubectl installed on the workstation, and in our Router we created the DNS turingpi.local to piont to a static IP we set in our DNS server so that name should resolve to the static ip of the motherboard - otherwise you can add it manually to the localhosts hosts file
