@@ -1,3 +1,3 @@
-This folder contains scripts etc - that I found usefull through my learning. 
+This folder contains the data and represents as the SD-card - mountet on the back of the turingpi2 board - which is created for easy flashing the turingPi2
 
-To make everything easier - you'll need to use ssh keys or password etc.
+The link is a shortcut the the latest versions releases for the RK1 card. 
