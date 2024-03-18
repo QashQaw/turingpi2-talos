@@ -86,8 +86,8 @@ Now Talos is installed on all four nodes
 
 ## Configuration on the nodes: 
 Our plan for the nodes are: 
-    node 1 - Controlplane
-    node 2 - worker
-    node 3 - worker + storage
-    node 4 - worker 
+    * node 1 - Controlplane + worker
+    * node 2 - worker + storage dev1
+    * node 3 - worker + storage prod1
+    * node 4 - Controlplane + worker + storage prod2 
 Generating the talos configuration 
