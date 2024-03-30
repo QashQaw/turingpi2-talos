@@ -2,9 +2,11 @@
 
 # [Turingpi2](https://turingpi.com/product/turing-pi-2/) with [talos linux](https://www.talos.dev/) and [Kubernetes Cluster](https://kubernetes.io/)
 
-I've been waiting a long time for the RK1 card to arrive, so that I had plenty of time to prepare my thoughts on this. Started out with only 1CM4 Pi4 Card - so not that much to prepare - But when only Unbuntu and talos imagesa are prepared for the RK1. Never the less - I do not like ubuntu on such small PC's - so talos is my choice. But I cannot take the credit for all the works others have done. 
+I've been waiting a long time for the RK1 card to arrive, so that I had plenty of time to prepare my thoughts on this.
+Started out with only 1CM4 Pi4 Card - so not that much to prepare - But when only Unbuntu and talos imagesa are prepared for the RK1. Never the less - I do not like ubuntu on such small PC's - so talos is my choice. But I cannot take the credit for all the works others have done. 
 Sources: 
     https://blog.itrestauracion.online/installing-kubernetes-talos-dev-in-rk1-turingpi-2-en-d578aa6ea35c
+    
 <table>
     <tr>
         <td>
@@ -22,10 +24,10 @@ Sources:
         </td>
     </tr>
 </table>    
+1. [Plan for build a cluster](#Plan for build a cluster 
+After doing a lot of videos and youtube
 
-But here's how I've done it. 
-
-## Build a cluster on the turingPi2 motherboard
+# Plan for build a cluster 
 After the default installation of the RK1 - we'll need to setup som small things after the DietPi is finished with the default setup. To get a better picture of what we're doing here: 
   * Flashing the Images from sdcard (fastest)
   * Generate standard configuration (and edit it to fit our requirements)
@@ -34,7 +36,7 @@ After the default installation of the RK1 - we'll need to setup som small things
   * Adding nodes to the cluster
   * pushing updates of the cconfiurations
 
-Since I've been struggling wit hgetting the cluster up and running - I've created [a small script for resetting](testing) all the 4 nodes on the turingPi2. -it'll start flashing node 1 and start node 1 - before flashine node 2 + 3 + 4 - and power the 3nodes up in the end of the scripts - this can be 
+Since I've been struggling wit hgetting the cluster up and running - I've created [a small script for resetting](testing) all the 4 nodes on the turingPi2. -it'll start flashing node 1 and start node 1 - before flashine node 2- and power the 3nodes up in the end of the scripts - this can be 
 
 ## Requirenments
 The turingpi2 Board + 4x RK1 cards - you will need talosctl and kubectl installed on the workstation, and in our Router we created the DNS turingpi.local to piont to a static IP we set in our DNS server so that name should resolve to the static ip of the motherboard - otherwise you can add it manually to the localhosts hosts file
@@ -74,21 +76,21 @@ The easiest way I found - was through a small simple script to reset the nodes (
     flashing node 1
     request flashing of talos-1.6.6_rk1-arm64.raw to node 1
      started transfer of 1.22 GiB..
-    ⠙ [00:02:25] [###################################################################################################################################################################################################################################################################################>] 1.22 GiB/1.22 GiB (0.1s)Done
+    ⠙ [00:02:25] [###########################################################################>] 1.22 GiB/1.22 GiB (0.1s)Done
     Finished flashing node 1 - Power it on before starting flashing node 2 
     ok
     flashing node 2
     request flashing of talos-1.6.6_rk1-arm64.raw to node 2
     started transfer of 1.22 GiB..
-    ⠲ [00:02:25] [###################################################################################################################################################################################################################################################################################>] 1.22 GiB/1.22 GiB (0.1s)Done
+    ⠲ [00:02:25] [#############################################################################>] 1.22 GiB/1.22 GiB (0.1s)Done
     flashing node 3
     request flashing of talos-1.6.6_rk1-arm64.raw to node 3
     started transfer of 1.22 GiB..
-    ⠈ [00:02:25] [###################################################################################################################################################################################################################################################################################>] 1.22 GiB/1.22 GiB (0.1s)Done
+    ⠈ [00:02:25] [#############################################################################>] 1.22 GiB/1.22 GiB (0.1s)Done
     flashing node 4
     request flashing of talos-1.6.6_rk1-arm64.raw to node 4
     started transfer of 1.22 GiB..
-    ⠉ [00:02:25] [###################################################################################################################################################################################################################################################################################>] 1.22 GiB/1.22 GiB (0.1s)Done
+    ⠉ [00:02:25] [#############################################################################>] 1.22 GiB/1.22 GiB (0.1s)Done
     Finished with Flashing the nodes
     Will now power on the other 3 nodes
     ok
