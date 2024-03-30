@@ -8,15 +8,15 @@ Sources:
 <table>
     <tr>
         <td>
-            image TuringPi
+           <img src="docs/turingpi-board.jpg" alt="TuringPi-v2.4">
         </td>
         <td>
             <table>
                 <tr>
-                    <td>rockchip</td>
+                    <td><img src="docs/RockChip.png" alt="Rockchip RK2588"></td>
                 </tr>
                 <tr>
-                    <td>CM4</td>
+                    <td><img src="docs/CM4.png" alt="RaspberryPi CM04"></td>
                 </tr>
             </table>
         </td>
