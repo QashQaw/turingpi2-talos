@@ -24,7 +24,7 @@ Sources:
         </td>
     </tr>
 </table>    
-    1. [Plan for build a cluster](#Plan for build a cluster 
+    1. [Plan for build a cluster](#Plan for build a cluster) 
 After doing a lot of videos and youtube
 
 # Plan for build a cluster 
