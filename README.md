@@ -8,7 +8,7 @@ Sources:
 <table>
     <tr>
         <td>
-           <img src="docs/images/turingpi-board.jpg" alt="TuringPi-v2.4">
+           <img src="docs/images/turingpi-board.jpg" alt="TuringPi-v2.4" />
         </td>
         <td>
             <table>
