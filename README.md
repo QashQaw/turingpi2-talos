@@ -5,7 +5,23 @@
 I've been waiting a long time for the RK1 card to arrive, so that I had plenty of time to prepare my thoughts on this. Started out with only 1CM4 Pi4 Card - so not that much to prepare - But when only Unbuntu and talos imagesa are prepared for the RK1. Never the less - I do not like ubuntu on such small PC's - so talos is my choice. But I cannot take the credit for all the works others have done. 
 Sources: 
     https://blog.itrestauracion.online/installing-kubernetes-talos-dev-in-rk1-turingpi-2-en-d578aa6ea35c
-    
+<table>
+    <tr>
+        <td>
+            image TuringPi
+        </td>
+        <td>
+            <table>
+                <tr>
+                    <td>rockchip</td>
+                </tr>
+                <tr>
+                    <td>CM4</td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>    
 
 But here's how I've done it. 
 
