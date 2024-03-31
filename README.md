@@ -27,8 +27,8 @@ Sources:
 
 
 1. [Plan for build a cluster](https://github.com/QashQaw/turingpi2-talos#plan-for-build-a-cluster)
-    1.1 [Requirements](https://github.com/QashQaw/turingpi2-talos#requirenments)
-    1.2 [Installing talos](https://github.com/QashQaw/turingpi2-talos#installing-talos)
+2. [Requirements](https://github.com/QashQaw/turingpi2-talos#requirenments)
+1.2 [Installing talos](https://github.com/QashQaw/turingpi2-talos#installing-talos)
 
 
 # Plan for build a cluster 
@@ -113,3 +113,6 @@ Our plan for the nodes are:
     * node 3 - worker + storage prod1
     * node 4 - Controlplane + worker + storage prod2 
 Generating the talos configuration 
+
+
+[def]: https://github.com/QashQaw/turingpi2-talos#installing-talos
