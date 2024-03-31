@@ -26,9 +26,8 @@ Sources:
 </table>    
 
 
-1. [Plan for build a cluster](https://github.com/QashQaw/turingpi2-talos#plan-for-build-a-cluster)
-2. [Requirements](https://github.com/QashQaw/turingpi2-talos#requirenments)
-1.2 [Installing talos](https://github.com/QashQaw/turingpi2-talos#installing-talos)
+1. [Plan for build a cluster](https://github.com/QashQaw/turingpi2-talos#plan-for-build-a-cluster) <br/>
+    [Installing talos](https://github.com/QashQaw/turingpi2-talos#installing-talos)
 
 
 # Plan for build a cluster 
