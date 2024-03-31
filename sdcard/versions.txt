@@ -1,0 +1,5 @@
+TuringPi official Images:
+    https://firmware.turingpi.com/turing-rk1/
+
+Sidero Labs version    
+    https://github.com/siderolabs/talos/releases
