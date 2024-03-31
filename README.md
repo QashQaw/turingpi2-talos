@@ -24,7 +24,7 @@ Sources:
         </td>
     </tr>
 </table>    
------------
+
 ### Table of content in this repository
 
 [Plan for build a cluster](https://github.com/QashQaw/turingpi2-talos#plan-for-build-a-cluster)
