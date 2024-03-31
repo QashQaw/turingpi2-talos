@@ -24,8 +24,11 @@ Sources:
         </td>
     </tr>
 </table>    
-    1. [Plan for build a cluster](#Plan for build a cluster) 
-After doing a lot of videos and youtube
+
+[1. Plan for build a cluster](https://github.com/QashQaw/turingpi2-talos#plan-for-build-a-cluster)
+[|-- Requirements](https://github.com/QashQaw/turingpi2-talos#requirenments)
+[|-- Installing talos](https://github.com/QashQaw/turingpi2-talos#installing-talos)
+
 
 # Plan for build a cluster 
 After the default installation of the RK1 - we'll need to setup som small things after the DietPi is finished with the default setup. To get a better picture of what we're doing here: 
