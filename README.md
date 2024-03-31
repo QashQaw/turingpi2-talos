@@ -28,8 +28,11 @@ Sources:
 ### Table of content in this repository
 
 [Plan for build a cluster](https://github.com/QashQaw/turingpi2-talos#plan-for-build-a-cluster)
+
     * [Requirements](https://github.com/QashQaw/turingpi2-talos#requirenments)
+    
     * [Installing talos](https://github.com/QashQaw/turingpi2-talos#installing-talos)
+    
     * [Configuring the nodes](https://github.com/QashQaw/turingpi2-talos#configuration-on-the-nodes)
 
 
