@@ -31,9 +31,9 @@ Sources:
 * [Requirements](https://github.com/QashQaw/turingpi2-talos#requirenments)   
 * [Installing talos](https://github.com/QashQaw/turingpi2-talos#installing-talos)    
 * [Configuring the nodes](https://github.com/QashQaw/turingpi2-talos#configuration-on-the-nodes)
-* - [pi01 Controlplane #1]
-* - [pi03 Controlplane #2]
-* - [pi04 Controlplane #3]
+- [pi01 Controlplane #1]
+- [pi03 Controlplane #2]
+- [pi04 Controlplane #3]
 
 
 # Plan for build a cluster 
