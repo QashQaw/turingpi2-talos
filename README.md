@@ -25,11 +25,10 @@ Sources:
     </tr>
 </table>    
 
-[TOC]
 
-[1. Plan for build a cluster](https://github.com/QashQaw/turingpi2-talos#plan-for-build-a-cluster)
-[|-- Requirements](https://github.com/QashQaw/turingpi2-talos#requirenments)
-[|-- Installing talos](https://github.com/QashQaw/turingpi2-talos#installing-talos)
+1. [Plan for build a cluster](https://github.com/QashQaw/turingpi2-talos#plan-for-build-a-cluster)
+    1.1 [Requirements](https://github.com/QashQaw/turingpi2-talos#requirenments)
+    1.2 [Installing talos](https://github.com/QashQaw/turingpi2-talos#installing-talos)
 
 
 # Plan for build a cluster 
