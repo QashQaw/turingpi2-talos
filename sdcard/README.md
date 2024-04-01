@@ -20,3 +20,10 @@ Sometimes one flashing get stucks and you'll have to stop it manually and restar
 
 Remember to correct the $IMAGE in reset.sh when updating to newer images. 
 
+## Extra
+If you add a line to your bash or zsh - you can use the tpi through the alias
+
+    alias turing='ssh root@turingpi.local'
+    alias master-tpi='/usr/bin/tpi --host turingpi.local --user=root --password="turing"'
+ 
+ Which will set up aliases up for the easy way. 

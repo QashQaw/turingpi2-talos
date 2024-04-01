@@ -31,21 +31,23 @@ Sources:
 * [Requirements](https://github.com/QashQaw/turingpi2-talos#requirenments)   
 * [Installing talos](https://github.com/QashQaw/turingpi2-talos#installing-talos)    
 * [Configuring the nodes](https://github.com/QashQaw/turingpi2-talos#configuration-on-the-nodes)
-  - [pi01 Controlplane #1]
-  - [pi03 Controlplane #2]
-  - [pi04 Controlplane #3]
-
+  - [pi01 Controlplane #1]()
+  - [pi03 Controlplane #2]()
+  - [pi04 Controlplane #3]()
+  - [pi02 Worker]()
 
 # Plan for build a cluster 
 After the default installation of the RK1 - we'll need to setup som small things after the DietPi is finished with the default setup. To get a better picture of what we're doing here: 
-  * Flashing the Images from sdcard (fastest)
+  * update the BMC image to v2.0.5
+  * Create the SDcard with images for Flashing the Images from sdcard (fastest)
   * Generate standard configuration (and edit it to fit our requirements)
   * apply configuration 
   * Bootstrap the cluster
+  * Setup NFS-storage for all 4 nodes
   * Adding nodes to the cluster
-  * pushing updates of the cconfiurations
+  * pushing updates of the confiurations
 
-Since I've been struggling wit hgetting the cluster up and running - I've created [a small script for resetting](testing) all the 4 nodes on the turingPi2. -it'll start flashing node 1 and start node 1 - before flashine node 2- and power the 3nodes up in the end of the scripts - this can be 
+Since I've been struggling with getting the cluster up and running - I've created [a small script for resetting](sdcard/reset) all the 4 nodes on the turingPi2. -it'll start flashing node 1 and start node 1 - before flashine node 2- and power the 3nodes up in the end of the scripts - this can be 
 
 ## Requirenments
 The turingpi2 Board + 4x RK1 cards - you will need talosctl and kubectl installed on the workstation, and in our Router we created the DNS turingpi.local to piont to a static IP we set in our DNS server so that name should resolve to the static ip of the motherboard - otherwise you can add it manually to the localhosts hosts file
@@ -76,48 +78,21 @@ For making the setup a little easier - we'll create an alias to use instead of t
     alias turing='ssh turingpi.local -l root' 
 
 ## Installing talos
-The easiest way I found - was through a small simple script to reset the nodes (change image etc) 
+The easiest way I found - was through a small simple script to reset the nodes (change image etc) Later on I changed the order to 1 - 3 - 4 - 2 according to the order of use on the 4 nodes. Reset all nodes according to the order and image file provided through the script 
 
     $ turing
     # /mnt/sdcard/reset.sh 
-    Starting the script - poweroff all nodes
-    ok
-    flashing node 1
-    request flashing of talos-1.6.6_rk1-arm64.raw to node 1
-     started transfer of 1.22 GiB..
-    ⠙ [00:02:25] [###########################################################################>] 1.22 GiB/1.22 GiB (0.1s)Done
-    Finished flashing node 1 - Power it on before starting flashing node 2 
-    ok
-    flashing node 2
-    request flashing of talos-1.6.6_rk1-arm64.raw to node 2
-    started transfer of 1.22 GiB..
-    ⠲ [00:02:25] [#############################################################################>] 1.22 GiB/1.22 GiB (0.1s)Done
-    flashing node 3
-    request flashing of talos-1.6.6_rk1-arm64.raw to node 3
-    started transfer of 1.22 GiB..
-    ⠈ [00:02:25] [#############################################################################>] 1.22 GiB/1.22 GiB (0.1s)Done
-    flashing node 4
-    request flashing of talos-1.6.6_rk1-arm64.raw to node 4
-    started transfer of 1.22 GiB..
-    ⠉ [00:02:25] [#############################################################################>] 1.22 GiB/1.22 GiB (0.1s)Done
-    Finished with Flashing the nodes
-    Will now power on the other 3 nodes
-    ok
-    ok
-    ok
-    End of the script 
-    # exit 
-    Connection to turingpi.local closed
 
-Now Talos is installed on all four nodes 
+Now Talos is installed on all four nodes and are now ready to be configured with recieving the configuration, for starting the configuration of our nodes.
 
 ## Configuration on the nodes: 
 Our plan for the nodes are: 
-    * node 1 - Controlplane + worker
-    * node 2 - worker + storage dev1
-    * node 3 - worker + storage prod1
-    * node 4 - Controlplane + worker + storage prod2 
-Generating the talos configuration 
+  * node 1 - Controlplane + worker                        # Attached HDMI and USB port
+  * node 2 - worker                                       # Our Nodes which is only worker.                
+  * node 3 - worker + local-storage                       # Attached NVME disk - will use as storage later on, since its connected with the 2sata ports.
+  * node 4 - Controlplane + worker + storage prod2        # Can use PCIe and the 2 x USB3.0 and with 2xUSB3.0 connecter to front of a cabinet 
+  
+Generating the talos configuration files, are done with a setup, patching our files with our requirements  
 
 
 [def]: https://github.com/QashQaw/turingpi2-talos#installing-talos
