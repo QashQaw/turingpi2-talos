@@ -2,8 +2,9 @@
 
 # [Turingpi2](https://turingpi.com/product/turing-pi-2/) with [talos linux](https://www.talos.dev/) and [Kubernetes Cluster](https://kubernetes.io/)
 
-I've been waiting a long time for the RK1 card to arrive, so that I had plenty of time to prepare my thoughts on this.
-Started out with only 1CM4 Pi4 Card - so not that much to prepare - But when only Unbuntu and talos imagesa are prepared for the RK1. Never the less - I do not like ubuntu on such small PC's - so talos is my choice. But I cannot take the credit for all the works others have done. 
+Waited excited for recieving the RK1 cards (have only been using CM4 cards untill now). </br>
+Only Ubuntu and Talos images are prepared for the RK at the moment. Never the less - I do not like ubuntu on such small PC's - so talos is my choice. 
+But I cannot take the credit for all the works others have done. 
 Sources: 
     https://blog.itrestauracion.online/installing-kubernetes-talos-dev-in-rk1-turingpi-2-en-d578aa6ea35c
     
@@ -43,11 +44,11 @@ After the default installation of the RK1 - we'll need to setup som small things
   * Generate standard configuration (and edit it to fit our requirements)
   * apply configuration 
   * Bootstrap the cluster
-  * Setup NFS-storage for all 4 nodes
+  * Setup NFS-storage for all 4 nodes (At the moment added the )
   * Adding nodes to the cluster
   * pushing updates of the confiurations
 
-Since I've been struggling with getting the cluster up and running - I've created [a small script for resetting](sdcard/reset) all the 4 nodes on the turingPi2. -it'll start flashing node 1 and start node 1 - before flashine node 2- and power the 3nodes up in the end of the scripts - this can be 
+Since I've been struggling with getting the cluster up and running - I've created [a small script for resetting](https://github.com/QashQaw/turingpi2-talos/blob/main/scripts/reset_tpi.sh)) all the 4 nodes on the turingPi2. -it'll start flashing node 1 and start node 1 - before flashine node 2- and power the 3nodes up in the end of the scripts - this can be 
 
 ## Requirenments
 The turingpi2 Board + 4x RK1 cards - you will need talosctl and kubectl installed on the workstation, and in our Router we created the DNS turingpi.local to piont to a static IP we set in our DNS server so that name should resolve to the static ip of the motherboard - otherwise you can add it manually to the localhosts hosts file
@@ -66,7 +67,8 @@ The turingpi2 Board + 4x RK1 cards - you will need talosctl and kubectl installe
     Password:  turing
 
     # Harddisk attached
-    1 x Samsung EVO 940 NVME disk attached to node 3 - should be used as storage: 
+    1 x Samsung EVO 940 NVME disk attached to node 3 - should be used as storage.
+        But for now the get it started - I'm using a inhouse NFS from a Synology 
 
     Latest talos RAW image from turingpi. Added to sdcard - mountet on the back of the Turingpi motherboard - for making everything easier.
     Added [reset script](https://github.com/QashQaw/turingpi2-talos/blob/main/scripts/reset_tpi.sh) to th SD card also.
@@ -91,7 +93,8 @@ Our plan for the nodes are:
   * node 2 - worker                                       # Our Nodes which is only worker.                
   * node 3 - worker + local-storage                       # Attached NVME disk - will use as storage later on, since its connected with the 2sata ports.
   * node 4 - Controlplane + worker + storage prod2        # Can use PCIe and the 2 x USB3.0 and with 2xUSB3.0 connecter to front of a cabinet 
-  
+  * docker.webmeup.dk - NFS share 200GB                   # Is added since the NFS is not a part of Talos - so have a VM as storage on Proxmox Server.
+
 Generating the talos configuration files, are done with a setup, patching our files with our requirements  
 
 
